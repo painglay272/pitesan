@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//whephiwums.com/vignette.min.js" data-zone="8852990" data-sdk="show_8852990"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- Navigation -->
+        <nav>
+            <button onclick="navigateTo('home')">Home</button>
+            <button onclick="navigateTo('earn')">Earn</button>
+            <button onclick="navigateTo('invite')">Invite</button>
+            <button onclick="navigateTo('account')">Account</button>
+        </nav>
+
+        <!-- Screens -->
+        <div id="home">
+            <button id="earn-point-btn">Earn Point</button>
+            <p>Today Income: <span id="today-income">0</span></p>
+        </div>
+
+        <div id="earn" style="display:none;">
+            <ul id="links-list"></ul>
+        </div>
+
+        <div id="invite" style="display:none;">
+            <p>Invite your friends to earn 100 points per invite!</p>
+            <button id="generate-invite-link-btn">Generate Invite Link</button>
+            <p id="invite-link-container"></p>
+        </div>
+
+        <div id="account" style="display:none;">
+            <img src="profile.jpg" alt="Profile Picture">
+            <p>Total Points: <span id="total-points">0</span></p>
+
+            <h3>Withdraw</h3>
+            <select id="withdraw-amount">
+                <option value="1000">1000 Ks (10,000 Points)</option>
+                <option value="5000">5000 Ks (50,000 Points)</option>
+                <option value="10000">10,000 Ks (100,000 Points)</option>
+            </select>
+
+            <select id="payment-method">
+                <option value="wave">Wave Pay</option>
+                <option value="bbz">BBZ Pay</option>
+            </select>
+            <input type="text" id="account-number" placeholder="Account Number">
+
+            <button id="withdraw-btn">Withdraw</button>
+            <p id="withdraw-message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
